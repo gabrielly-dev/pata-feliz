@@ -615,9 +615,8 @@ footer {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) and (max-width: 767px) {
     header {
-        border: solid red 3px;
         height: 25vh;
         display: flex;
         flex-direction: column;
@@ -662,22 +661,251 @@ footer {
 
     main {
 
-        section {
-            
-            #inicio {
+        #inicio {
+            padding: 0;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 120vh;
+
+            article {
                 display: flex;
-                flex-direction: column-reverse;
+                flex-direction: column;
+                justify-content: center;
+                width: 80%;
+                height: 45vh;
+
+                #heart {
+                    width: 50%;
+                    padding: 5px 10px;
+                    margin-bottom: 15px;
+                    height: 4vh;
+                    font-size: 0.8em;
+                }
+
+                #texto-apresentacao {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+
+                    h1 {
+                        font-size: 2.5em;
+                        padding-bottom: 20px;
+                    }
+
+                    p {
+                        font-size: 1em;
+                    }
+                }
+
+                #botoes {
+                    margin-top: 50px;
+                }
+            }
+
+            #vet {
+                width: 80%;
+                border: 12px solid #AEC6CF;
+                border-radius: 50px 100px;
+            }
+        }
+
+        #section-servicos {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            height: 210vh;
+
+            .intro-section {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                margin: 20px;
+            }
+
+            article {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                height: 170vh;
+
+                .card {
+                    justify-content: space-evenly;
+                    width: 60%;
+                    height: 40vh;
+                    padding: 30px;
+
+                    .saiba-mais {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        #section-depoimentos {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            height: 210vh;
+
+            .intro-section {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                margin: 20px;
+            }
+
+            article {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                height: 170vh;
+                align-items: center;
+
+                .card {
+                    justify-content: space-evenly;
+                    width: 60%;
+                    height: 40vh;
+                    padding: 30px;
+
+                    .saiba-mais {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
 
     footer {
-        display: none;
+        font-size: 1em;
+
+        article {
+            margin: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                /* align-items: center;
+                text-align: center; */
+
+            }
+        }
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    header {
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        nav {
+            width: 80%;
+
+            ul {
+
+                width: 100%;
+
+                a {
+                    padding: 2% 5%;
+                }
+            }
+        }
+
+
+    }
+
+    main {
+
+        #inicio {
+            height: 70vh;
+            padding: 20px;
+            align-items: center;
+
+            article {
+                justify-content: center;
+
+                #heart {
+                    width: 90%;
+                    padding: 3% 0%;
+                    margin-bottom: 20px;
+                }
+
+                #texto-apresentacao {
+
+                    h1 {
+                        font-size: 3em;
+                    }
+
+                    p {
+                        font-size: 1em;
+                        text-align: left;
+                    }
+                }
+
+                #botoes {
+                    margin-top: 40px;
+
+
+                }
+            }
+
+            #vet {
+                width: 50%;
+                height: 50vh;
+            }
+        }
+
+        #section-servicos {
+            padding: 40px;
+            height: 70vh;
+
+            article {
+                margin: 0;
+                justify-content: space-between;
+
+                .card {
+                    width: 25vw;
+                    margin: 10px;
+
+                    .saiba-mais {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+
+        #section-depoimentos {
+            padding: 40px;
+            height: 70vh;
+
+            article {
+                margin: 0;
+                justify-content: space-between;
+
+                .card {
+                    width: 25vw;
+                    margin: 10px;
+
+                    .saiba-mais {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+
+    }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {}
