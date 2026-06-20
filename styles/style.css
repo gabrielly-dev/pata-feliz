@@ -3,6 +3,11 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Quicksand", Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -35,13 +40,11 @@ header {
             }
 
             p {
-                font-family: "Quicksand", Arial, Helvetica, sans-serif;
                 font-weight: 500;
                 font-size: 0.9em;
             }
         }
     }
-
 
     nav {
         width: 100%;
@@ -54,20 +57,15 @@ header {
             flex-direction: row;
             justify-content: space-between;
             width: 80%;
+            list-style: none;
 
             a {
                 text-decoration: none;
-                font-family: "Quicksand", Arial, Helvetica, sans-serif;
                 font-weight: 500;
                 padding: 1% 4%;
                 border-radius: 100px;
                 color: #4A0E4E;
-
-                li {
-
-                    list-style: none;
-
-                }
+                transition: all 0.3s ease;
             }
 
             a:hover {
@@ -77,38 +75,27 @@ header {
 
             #inicio {
                 background-color: #FFB6C1;
-
             }
 
             #inicio:hover {
                 background-color: rgba(255, 182, 193, 0.7);
-                font-weight: 700;
             }
 
             #entrar {
-
                 background-color: #4A0E4E;
                 color: white;
             }
 
             #entrar:hover {
-
                 background-color: rgba(74, 14, 78, 0.7);
-                color: white;
-                font-weight: 700;
             }
         }
     }
-
-
 }
 
-
-
 main {
-
     #inicio {
-        height: 70vh;
+        height: 80vh;
         display: flex;
         justify-content: space-between;
         padding: 4%;
@@ -130,11 +117,9 @@ main {
                 width: 60%;
                 padding: 1%;
                 margin-bottom: 20px;
-                font-family: "Quicksand", Arial, Helvetica, sans-serif;
                 font-size: 1.2em;
                 font-weight: 500;
                 text-align: justify;
-
 
                 img {
                     height: 20px;
@@ -142,25 +127,20 @@ main {
                 }
             }
 
-
-
             #texto-apresentacao {
                 margin-bottom: 40px;
 
                 h1 {
                     font-family: "Nunito", Arial, Helvetica, sans-serif;
-                    font-size: 4em;
+                    font-size: 4.5em;
                     font-weight: 800;
                 }
 
                 p {
-                    font-family: "Quicksand", Arial, Helvetica, sans-serif;
                     font-size: 1.2em;
                     font-weight: 500;
                     text-align: justify;
                 }
-
-
             }
 
             #botoes {
@@ -168,43 +148,38 @@ main {
                 flex-direction: row;
                 justify-content: space-around;
 
-                #servicos {
+                button {
                     padding: 2%;
                     width: 40%;
                     font-family: "Quicksand", Arial, Helvetica, sans-serif;
                     font-size: 1em;
                     font-weight: 600;
-                    background-color: #FFB6C1;
                     border-radius: 50px;
+                    transition: width 0.4s, background-color 0.3s;
+                    cursor: pointer;
+                }
+
+                #servicos {
+                    background-color: #FFB6C1;
                     border: 2px solid #ff8b9d;
-                    transition: width 0.4s;
                 }
 
                 #servicos:hover {
                     background-color: #ff8b9d;
                     color: white;
-                    cursor: pointer;
                     font-weight: 800;
                     box-shadow: 0px 2px 5px #888888;
                     width: 42%;
                 }
 
                 #depoimentos {
-                    padding: 2%;
-                    width: 40%;
-                    font-family: "Quicksand", Arial, Helvetica, sans-serif;
-                    font-size: 1em;
-                    font-weight: 600;
                     background-color: #AEC6CF;
-                    border-radius: 50px;
                     border: #7ca4b3 2px solid;
-                    transition: width 0.4s;
                 }
 
                 #depoimentos:hover {
                     background-color: #7ca4b3;
                     color: white;
-                    cursor: pointer;
                     font-weight: 800;
                     box-shadow: 0px 2px 5px #888888;
                     width: 42%;
@@ -217,98 +192,14 @@ main {
             width: 50%;
             border-radius: 100px 250px;
             border: 20px solid #AEC6CF;
+            object-fit: cover;
         }
     }
 
-    #section-servicos {
-        padding: 50px;
-        background-color: #DFE8EC;
-        height: 85vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        .intro-section {
-            margin-bottom: 5vh;
-
-            h2 {
-                font-family: "Nunito", Arial, Helvetica, sans-serif;
-                font-weight: 800;
-                font-size: 2.5em;
-                text-align: center;
-                color: #4A0E4E;
-            }
-
-            p {
-                font-family: "Quicksand", Arial, Helvetica, sans-serif;
-                text-align: center;
-                font-size: 1em;
-            }
-        }
-
-        article {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            margin: 50px;
-
-            .card {
-                background-color: #ffffff;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                border: 1px solid #FFB6C1;
-                border-radius: 40px;
-                box-shadow: 0px 0px 10px #c0c0c0;
-                width: 20vw;
-                height: 30vh;
-                padding: 2%;
-                transition: width, height, ;
-
-
-                .image-servico {
-                    width: 10%;
-                    background-color: #FEDADF;
-                    padding: 15px;
-                    border-radius: 20px;
-
-                }
-
-                h3 {
-                    font-size: 1.5em;
-                    font-family: "Nunito", Arial, Helvetica, sans-serif;
-                }
-
-                p {
-                    font-size: 1em;
-                    font-family: "Quicksand", Arial, Helvetica, sans-serif;
-                }
-
-                .saiba-mais {
-                    width: 40%;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-
-                    a {
-                        font-family: "Quicksand", Arial, Helvetica, sans-serif;
-                        font-size: 1em;
-                        font-weight: 600;
-                        text-decoration: none;
-                        margin-right: 5px;
-                    }
-
-                    img {
-                        width: 15px;
-                    }
-                }
-            }
-        }
-    }
-
+    #section-servicos,
     #section-depoimentos {
         padding: 50px;
-        height: 85vh;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -325,7 +216,6 @@ main {
             }
 
             p {
-                font-family: "Quicksand", Arial, Helvetica, sans-serif;
                 text-align: center;
                 font-size: 1em;
             }
@@ -335,6 +225,7 @@ main {
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
+            align-items: center;
             margin: 50px;
 
             .card {
@@ -342,54 +233,98 @@ main {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
-                border: 1px solid #AEC6CF;
                 border-radius: 40px;
                 box-shadow: 0px 0px 10px #c0c0c0;
-                width: 20vw;
-                height: 30vh;
+                width: 25vw;
+                height: 40vh;
                 padding: 2%;
+                transition: all 0.3s;
+            }
+        }
+    }
 
-                .abre-aspas {
-                    width: 10%;
-                    display: flex;
-                    align-self: flex-start;
+    #section-servicos {
+        background-color: #DFE8EC;
+
+        article .card {
+            border: 1px solid #FFB6C1;
+
+            .image-servico {
+                width: 20%;
+                background-color: #FEDADF;
+                padding: 15px;
+                border-radius: 20px;
+            }
+
+            h3 {
+                font-size: 1.5em;
+                font-family: "Nunito", Arial, Helvetica, sans-serif;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .saiba-mais {
+                width: 40%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                a {
+                    font-weight: 600;
+                    text-decoration: none;
+                    margin-right: 5px;
+                    color: #000;
                 }
 
-                .fecha-aspas {
-                    width: 10%;
-                    display: flex;
-                    align-self: flex-end;
+                img {
+                    width: 15px;
                 }
+            }
+        }
+    }
 
-                p {
-                    font-family: "Quicksand", Arial, Helvetica, sans-serif;
-                    text-align: justify;
-                }
+    #section-depoimentos {
+        article .card {
+            border: 1px solid #AEC6CF;
 
-                .perfil-depoimento {
+            .abre-aspas {
+                width: 10%;
+                align-self: flex-start;
+            }
+
+            .fecha-aspas {
+                width: 10%;
+                align-self: flex-end;
+            }
+
+            p {
+                text-align: justify;
+            }
+
+            .perfil-depoimento {
+                display: flex;
+                align-items: center;
+
+                h4 {
                     display: flex;
                     align-items: center;
+                    justify-content: center;
+                    background-color: #ff8b9d;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 100px;
+                    margin-right: 20px;
+                    color: white;
+                    font-size: 1.5em;
+                }
 
-                    h4 {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        background-color: #ff8b9d;
-                        width: 50px;
-                        height: 50px;
-                        border-radius: 100px;
-                        margin-right: 20px;
-                        font-family: "Quicksand", Arial, Helvetica, sans-serif;
-                        color: white;
-                        font-size: 1.5em;
-                    }
-
-                    h5 {
-                        font-family: "Nunito", Arial, Helvetica, sans-serif;
-                        font-weight: 800;
-                        font-size: 1.1em;
-                        color: #4A0E4E;
-                    }
+                h5 {
+                    font-family: "Nunito", Arial, Helvetica, sans-serif;
+                    font-weight: 800;
+                    font-size: 1.1em;
+                    color: #4A0E4E;
                 }
             }
         }
@@ -400,27 +335,20 @@ footer {
     background-color: #4A0E4E;
     display: flex;
     flex-direction: column;
+    color: #ffffff;
 
     article {
-
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        color: #ffffff;
+        padding: 40px 0;
 
         div {
             margin: 2%;
 
-            h2 {
-                font-family: "Nunito", Arial, Helvetica, sans-serif;
-            }
-
+            h2,
             h3 {
                 font-family: "Nunito", Arial, Helvetica, sans-serif;
-            }
-
-            p {
-                font-family: "Quicksand", Arial, Helvetica, sans-serif;
             }
         }
     }
@@ -429,181 +357,93 @@ footer {
         border-top: rgba(255, 255, 255, 0.05) solid 1px;
         text-align: center;
         padding: 30px;
-        color: #ffffff;
-        font-family: "Quicksand", Arial, Helvetica, sans-serif;
         font-size: 0.9em;
     }
 }
 
-
-/* Extra small devices (phones, 600px and down) */
+/* Celulares pequenos (até 600px) */
 @media only screen and (max-width: 600px) {
-
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
     header {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 45vh;
+        height: 35vh;
 
         #logotipo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
             width: 100%;
 
             img {
-                padding: 0px;
+                padding: 0;
             }
         }
 
-        nav {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        nav ul {
+            flex-wrap: wrap;
+            width: 50%;
+            height: 100%;
             justify-content: center;
-            height: 20vh;
-            width: 100%;
 
-            ul {
+            a {
                 display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
+                justify-content: center;
                 align-items: center;
-                justify-content: space-evenly;
-                height: 100%;
-                width: 50%;
+                margin: 10px;
+            }
 
-                a {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                }
-
-                #inicio {
-                    width: 20vw;
-                    height: 4vh;
-                }
-
-                #entrar {
-                    width: 20vw;
-                    height: 4vh;
-                }
+            #inicio,
+            #entrar {
+                width: 20vw;
+                height: 4vh;
             }
         }
     }
 
     main {
-
         #inicio {
             padding: 0;
-            display: flex;
             flex-direction: column-reverse;
-            align-items: center;
             justify-content: space-evenly;
-            height: 110vh;
+            height: auto;
 
             article {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
                 width: 80%;
-                height: 55vh;
+                height: auto;
+                margin: 40px 0px 80px 0px;
 
                 #heart {
                     width: 80%;
-                    height: 4vh;
-                    padding: 0;
+                    padding: 5px;
                     font-size: 0.8em;
                 }
 
-                #texto-apresentacao {
-                    height: 35vh;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-
-                    h1 {
-                        font-size: 2.5em;
-                    }
-
-                    p {
-                        font-size: 1em;
-                    }
+                #texto-apresentacao h1 {
+                    font-size: 2.5em;
                 }
             }
 
             #vet {
+                margin-top: 80px;
                 width: 80%;
-                border: 12px solid #AEC6CF;
+                border-width: 12px;
                 border-radius: 50px 100px;
             }
         }
 
-        #section-servicos {
-            display: flex;
-            flex-direction: column;
-            padding: 0;
-            height: 210vh;
-
-            .intro-section {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                margin: 20px;
-            }
-
-            article {
-                margin: 0;
-                display: flex;
-                flex-direction: column;
-                height: 170vh;
-
-                .card {
-                    justify-content: space-evenly;
-                    width: 60%;
-                    height: 40vh;
-                    padding: 30px;
-
-                    .saiba-mais {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-
+        #section-servicos,
         #section-depoimentos {
-            display: flex;
-            flex-direction: column;
-            padding: 0;
-            height: 210vh;
+            height: auto;
+            padding: 50px 0px;
 
             .intro-section {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                margin: 20px;
+                margin: 30px 20px;
             }
 
             article {
-                margin: 0;
-                display: flex;
                 flex-direction: column;
-                height: 170vh;
-                align-items: center;
+                margin: 0;
 
                 .card {
-                    justify-content: space-evenly;
-                    width: 60%;
-                    height: 40vh;
+                    width: 80%;
+
                     padding: 30px;
+                    margin-bottom: 30px;
 
                     .saiba-mais {
                         width: 100%;
@@ -613,309 +453,124 @@ footer {
         }
     }
 
-    footer {
-        font-size: 1em;
-
-        article {
-            margin: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            div {
-                display: flex;
-                flex-direction: column;
-                /* align-items: center;
-                text-align: center; */
-
-            }
-        }
+    footer article {
+        flex-direction: column;
+        margin: 20px;
     }
-
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Tablets em pé e celulares grandes (600px até 767px) */
 @media only screen and (min-width: 600px) and (max-width: 767px) {
     header {
         height: 25vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-
-        #logotipo {
-            img {
-                padding: 0px 15px;
-            }
-        }
 
         nav {
             width: 80%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
 
             ul {
-                width: 100%;
-                text-align: center;
-                display: flex;
-                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
 
                 a {
-                    flex-wrap: nowrap;
-                    padding: 0;
+                    padding: 20px 30px;
                 }
-
-                #inicio {
-                    padding: 2% 4%;
-                }
-
-                #entrar {
-                    padding: 2% 4%;
-                }
-
-
             }
         }
     }
 
     main {
-
         #inicio {
-            padding: 0;
-            display: flex;
+            padding: 70px 0;
             flex-direction: column-reverse;
-            align-items: center;
-            justify-content: space-evenly;
-            height: 120vh;
+            height: auto;
 
             article {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
                 width: 80%;
-                height: 45vh;
 
-                #heart {
-                    width: 50%;
-                    padding: 5px 10px;
-                    margin-bottom: 15px;
-                    height: 4vh;
-                    font-size: 0.8em;
-                }
-
-                #texto-apresentacao {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-
-                    h1 {
-                        font-size: 2.5em;
-                        padding-bottom: 20px;
-                    }
-
-                    p {
-                        font-size: 1em;
-                    }
-                }
-
-                #botoes {
-                    margin-top: 50px;
+                #texto-apresentacao h1 {
+                    font-size: 2.5em;
                 }
             }
 
             #vet {
                 width: 80%;
-                border: 12px solid #AEC6CF;
-                border-radius: 50px 100px;
+                margin-bottom: 50px;
             }
         }
 
-        #section-servicos {
-            display: flex;
-            flex-direction: column;
-            padding: 0;
-            height: 210vh;
-
-            .intro-section {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                margin: 20px;
-            }
-
-            article {
-                margin: 0;
-                display: flex;
-                flex-direction: column;
-                height: 170vh;
-
-                .card {
-                    justify-content: space-evenly;
-                    width: 60%;
-                    height: 40vh;
-                    padding: 30px;
-
-                    .saiba-mais {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-
+        #section-servicos,
         #section-depoimentos {
-            display: flex;
-            flex-direction: column;
-            padding: 0;
-            height: 210vh;
-
-            .intro-section {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                margin: 20px;
-            }
+            height: auto;
+            padding: 70px 0;
 
             article {
-                margin: 0;
-                display: flex;
                 flex-direction: column;
-                height: 170vh;
-                align-items: center;
+                margin: 0;
 
                 .card {
-                    justify-content: space-evenly;
                     width: 60%;
-                    height: 40vh;
+                    height: 30vh;
                     padding: 30px;
-
-                    .saiba-mais {
-                        width: 100%;
-                    }
+                    margin-bottom: 30px;
                 }
             }
         }
     }
 
-    footer {
-        font-size: 1em;
-
-        article {
-            margin: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            div {
-                display: flex;
-                flex-direction: column;
-                /* align-items: center;
-                text-align: center; */
-
-            }
-        }
+    footer article {
+        flex-direction: column;
+        margin: 20px;
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+/* Tablets deitados (768px até 991px) */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-
     header {
-        height: 30vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-
-        nav {
-            width: 80%;
-
-            ul {
-
-                width: 100%;
-
-                a {
-                    padding: 2% 5%;
-                }
-            }
-        }
-
-
+        height: 20vh;
     }
 
     main {
-
         #inicio {
-            height: 70vh;
-            padding: 20px;
-            align-items: center;
+            flex-direction: column-reverse;
+            margin: 100px 50px;
+            padding: 0;
+
+            #vet {
+                width: 100%;
+                margin-bottom: 40px;
+            }
 
             article {
-                justify-content: center;
+                width: 100%;
 
                 #heart {
-                    width: 90%;
-                    padding: 3% 0%;
-                    margin-bottom: 20px;
+                    margin-top: 50px;
                 }
 
                 #texto-apresentacao {
+                    margin: 30px 0px 60px 0px;
 
                     h1 {
                         font-size: 3em;
                     }
-
-                    p {
-                        font-size: 1em;
-                        text-align: left;
-                    }
-                }
-
-                #botoes {
-                    margin-top: 40px;
-
-
-                }
-            }
-
-            #vet {
-                width: 50%;
-                height: 50vh;
-            }
-        }
-
-        #section-servicos {
-            padding: 40px;
-            height: 70vh;
-
-            article {
-                margin: 0;
-                justify-content: space-between;
-
-                .card {
-                    width: 25vw;
-                    margin: 10px;
-
-                    .saiba-mais {
-                        width: 80%;
-                    }
                 }
             }
         }
 
+        #section-servicos,
         #section-depoimentos {
-            padding: 40px;
-            height: 70vh;
-
+            height: auto;
             article {
-                margin: 0;
-                justify-content: space-between;
+                flex-wrap: wrap;
 
                 .card {
-                    width: 25vw;
-                    margin: 10px;
+                    width: 300px;
+                    height: 400px;
+                    margin: 20px;
+                    padding: 20px;
 
                     .saiba-mais {
-                        width: 80%;
+                        width: 100%;
                     }
                 }
             }
@@ -923,91 +578,31 @@ footer {
     }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) and (max-width:1199px) {
-
+/* Laptops e monitores médios (992px até 1199px) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
     header {
         height: 25vh;
-        justify-content: space-evenly;
-
-        #logotipo {
-            img {
-                padding: 0px 20px;
-            }
-        }
-
-        nav {
-            width: 70%;
-
-            ul {
-                width: 100%;
-                justify-content: space-evenly;
-            }
-        }
     }
 
     main {
-
-
-        #inicio {
-            padding: 50px;
-            height: 90vh;
-            align-items: center;
-
-            article {
-                justify-content: center;
-
-                #heart {
-                    width: 80%;
-                    height: 4vh;
-                    margin-bottom: 30px;
-                }
-
-                #texto-apresentacao {
-                    margin-bottom: 50px;
-
-                    h1 {
-                        font-size: 3.5em;
-                    }
-                }
-            }
-
-            #vet {
-                height: 60vh;
-            }
+        #inicio article #texto-apresentacao h1 {
+            font-size: 3.5em;
         }
 
-        #section-servicos {
-            height: 70vh;
-
-            article {
-                justify-content: space-between;
-                margin: 0;
-
-                .card {
-                    width: 25vw;
-                }
-            }
-        }
-
+        #section-servicos,
         #section-depoimentos {
-            height: 70vh;
+            height: auto;
 
             article {
-                justify-content: space-between;
-                margin: 0;
+                flex-wrap: wrap;
 
                 .card {
-                    width: 25vw;
+                    height: 400px;
+                    width: 350px;
+                    margin: 30px;
+                    padding: 30px;
                 }
             }
         }
     }
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
-    header {}
 }
